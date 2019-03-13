@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 9ea5d2fdbccdb22429fc6134802b996f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: __handle
+    100002: background
+    100004: 'Bushing '
+    100006: Bushing .2
+    100008: 'button '
+    100010: button .2
+    100012: cage
+    100014: Camera
+    100016: Det
+    100018: Det.2
+    100020: floor
+    100022: Front
+    100024: front
+    100026: fuse
+    100028: fuse.2
+    100030: fuse.3
+    100032: 'handle '
+    100034: handle .2
+    100036: latch
+    100038: latch.2
+    100040: latch.3
+    100042: light
+    100044: light.2
+    100046: light.3
+    100048: light.4
+    100050: Occlusion
+    100052: Pistol
+    100054: //RootNode
+    100056: 'shutter '
+    100058: shutter .2
+    100060: Sky
+    100062: 'strap '
+    100064: striker
+    100066: striker.2
+    100068: striker.3
+    100070: trigger
+    100072: trigger.2
+    100074: trigger.3
+    100076: 'trunk '
+    400000: __handle
+    400002: background
+    400004: 'Bushing '
+    400006: Bushing .2
+    400008: 'button '
+    400010: button .2
+    400012: cage
+    400014: Camera
+    400016: Det
+    400018: Det.2
+    400020: floor
+    400022: Front
+    400024: front
+    400026: fuse
+    400028: fuse.2
+    400030: fuse.3
+    400032: 'handle '
+    400034: handle .2
+    400036: latch
+    400038: latch.2
+    400040: latch.3
+    400042: light
+    400044: light.2
+    400046: light.3
+    400048: light.4
+    400050: Occlusion
+    400052: Pistol
+    400054: //RootNode
+    400056: 'shutter '
+    400058: shutter .2
+    400060: Sky
+    400062: 'strap '
+    400064: striker
+    400066: striker.2
+    400068: striker.3
+    400070: trigger
+    400072: trigger.2
+    400074: trigger.3
+    400076: 'trunk '
+    2000000: Camera
+    2100000: UV
+    2100002: UV.1
+    2100004: UV.2
+    2100006: UV.3
+    2100008: UV.4
+    2100010: UV.5
+    2100012: UV.6
+    2100014: UV.7
+    2100016: UV.8
+    2100018: UV.9
+    2100020: UV.10
+    2100022: UV.11
+    2100024: UV.12
+    2100026: UV.13
+    2100028: UV.14
+    2300000: 'Bushing '
+    2300002: Bushing .2
+    2300004: 'button '
+    2300006: button .2
+    2300008: cage
+    2300010: Det.2
+    2300012: front
+    2300014: fuse.3
+    2300016: handle .2
+    2300018: latch.3
+    2300020: shutter .2
+    2300022: 'strap '
+    2300024: striker.3
+    2300026: trigger.3
+    2300028: 'trunk '
+    3300000: 'Bushing '
+    3300002: Bushing .2
+    3300004: 'button '
+    3300006: button .2
+    3300008: cage
+    3300010: Det.2
+    3300012: front
+    3300014: fuse.3
+    3300016: handle .2
+    3300018: latch.3
+    3300020: shutter .2
+    3300022: 'strap '
+    3300024: striker.3
+    3300026: trigger.3
+    3300028: 'trunk '
+    4300000: striker.3
+    4300002: trigger.3
+    4300004: fuse.3
+    4300006: 'Bushing '
+    4300008: latch.3
+    4300010: Bushing .2
+    4300012: 'button '
+    4300014: button .2
+    4300016: Det.2
+    4300018: handle .2
+    4300020: cage
+    4300022: 'strap '
+    4300024: 'trunk '
+    4300026: front
+    4300028: shutter .2
+    7400000: C4D Animation Take
+    9500000: //RootNode
+    10800000: light
+    10800002: light.2
+    10800004: light.3
+    10800006: light.4
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

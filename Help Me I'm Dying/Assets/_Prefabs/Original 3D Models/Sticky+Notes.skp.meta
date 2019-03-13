@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: b3fd50f1aecee1e4c95d54cf7dc78336
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
+  assetHash:
+    serializedVersion: 2
+    Hash: e592e5cfc92bca8ed7897546c2a99a20
+  longitude: -105.283
+  latitude: 40.017
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 7.011945, y: 3.6584313, z: -9.630803}
+      lookAt: {x: 7.011945, y: 3.6584313, z: 13.59174}
+      up: {x: 0, y: 1, z: 0}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: 2.7282267, y: 2.1280367, z: -0.9157076}
+        lookAt: {x: 1.7298498, y: 0.77910906, z: 0.2424287}
+        up: {x: -0.43195057, y: 0.74989784, z: 0.5010709}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 1
+    - camera:
+        position: {x: 7.011945, y: 3.6584313, z: -9.630803}
+        lookAt: {x: 7.011945, y: 3.6584313, z: 13.59174}
+        up: {x: 0, y: 1, z: 0}
+        fov: 35
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 2
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: -ujaididida
+    100002: Group 13
+    100004: Group 15
+    100006: Group 2
+    100008: Group 3
+    100010: Group 7
+    100012: I'll be back soo
+    100014: Image 1
+    100016: 'my 3d model  is '
+    100018: //RootNode
+    400000: -ujaididida
+    400002: Group 13
+    400004: Group 15
+    400006: Group 2
+    400008: Group 3
+    400010: Group 7
+    400012: I'll be back soo
+    400014: Image 1
+    400016: 'my 3d model  is '
+    400018: //RootNode
+    2100000: Material 1
+    2100002: '[Color_E04]'
+    2100004: '[Color_009]'
+    2300000: -ujaididida
+    2300002: Group 13
+    2300004: Group 15
+    2300006: Group 3
+    2300008: Group 7
+    2300010: I'll be back soo
+    2300012: Image 1
+    2300014: 'my 3d model  is '
+    3300000: -ujaididida
+    3300002: Group 13
+    3300004: Group 15
+    3300006: Group 3
+    3300008: Group 7
+    3300010: I'll be back soo
+    3300012: Image 1
+    3300014: 'my 3d model  is '
+    4300000: Mesh Sticky+Notes
+    4300002: Mesh Group 3
+    4300004: 'Mesh my 3d model  is '
+    4300006: Mesh Group 7
+    4300008: Mesh I'll be back soo
+    4300010: Mesh -ujaididida
+    4300012: Mesh Group 13
+    4300014: Mesh Group 15
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
