@@ -31,31 +31,31 @@ public class MenuButton : MonoBehaviour
     public GameObject mainmenu;
     public FPS fps;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (menuButtonController.index == thisIndex)
-        {
-            animator.SetBool("selected", true);
-            if (Input.GetAxis("Submit") == 1)
-            {
-                animator.SetBool("pressed", true);
-            }
-            else if (animator.GetBool("pressed"))
-            {
-                animator.SetBool("pressed", false);
-                animatorFunctions.disableOnce = true;
-                if (thisIndex == 0) LevelSelector();
-                if (thisIndex == 1) Options();
-                if (thisIndex == 2) QuitGame();
-            }
-        }
-        else
-        {
-            animator.SetBool("selected", false);
-        }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (menuButtonController.index == thisIndex)
+    //    {
+    //        animator.SetBool("selected", true);
+    //        if (Input.GetAxis("Submit") == 1)
+    //        {
+    //            animator.SetBool("pressed", true);
+    //        }
+    //        else if (animator.GetBool("pressed"))
+    //        {
+    //            animator.SetBool("pressed", false);
+    //            animatorFunctions.disableOnce = true;
+    //            if (thisIndex == 0) LevelSelector();
+    //            if (thisIndex == 1) Options();
+    //            if (thisIndex == 2) QuitGame();
+    //        }
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool("selected", false);
+    //    }
 
-    }
+    //}
 
     public void LevelSelector()
     {

@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FPS : MonoBehaviour {
 
-    private float speed = 10; //7.5f;
+    private float speed = 7.5f;
 
     public int level = 0; 
 
@@ -27,7 +26,7 @@ public class FPS : MonoBehaviour {
 
     private Camera m_Camera;
 
-    //GameObject[] enemies;
+    GameObject enemy;
 
     // Use this for initialization
     void Awake() {
@@ -35,7 +34,7 @@ public class FPS : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
         m_rigid = GetComponent<Rigidbody>();
         m_Camera = GetComponentInChildren<Camera>();
-        //enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
 
     }
 
@@ -92,7 +91,7 @@ public class FPS : MonoBehaviour {
         //InternalLockUpdate();
     }
 
-    private void InternalLockUpdate()
+        private void InternalLockUpdate()
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {

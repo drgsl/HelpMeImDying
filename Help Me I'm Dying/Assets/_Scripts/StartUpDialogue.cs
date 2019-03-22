@@ -15,6 +15,7 @@ public class StartUpDialogue : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        this.transform.position = player.transform.position;
     }
 
     private void OnTriggerEnter(Collider other)

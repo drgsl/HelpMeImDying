@@ -9,6 +9,16 @@ using UnityEngine.UI;
 public class Buttons : MonoBehaviour {
 
 
+
+    Resolution[] resolutions;
+
+    public AudioMixer audioMixer;
+
+    public Dropdown resolutionDropdown;
+
+
+
+
     public GameObject optionsMenu;
 
     public WinMenu winmenu;
@@ -16,17 +26,19 @@ public class Buttons : MonoBehaviour {
     FPS fps;
 
     //public GameObject SaveButtons
-    [Space]
-    [Header ("Try Your Luck")]
-    public GameObject player;
+    GameObject player;
     public GameObject EndMenu;
-    public PlayerHealth playerHealth;
-    public DialogueTrigger luckydialogtrigger;
+    PlayerHealth playerHealth;
+    DialogueTrigger luckydialogtrigger;
 
     public GameObject enemyspawner;
 
     public GameObject maze;
     public GameObject house;
+
+    public Animator quitanim;
+
+
 
     private void Awake()
     {
@@ -53,9 +65,12 @@ public class Buttons : MonoBehaviour {
 
     public void QuitGame()
     {
-        if (winmenu.Finished)
+        if (winmenu != null)
         {
-            fps.SavePlayer();
+            if (winmenu.Finished)
+            {
+                fps.SavePlayer();
+            }
         }
         Application.Quit();
         Debug.Log("Quitting game....");
@@ -106,21 +121,10 @@ public class Buttons : MonoBehaviour {
     }
 
 
-    //Settings
 
-    Resolution[] resolutions;
-
-    public AudioMixer audioMixer;
-
-    public Dropdown resolutionDropdown;
 
     private void Start()
     {
-
-        Cursor.visible = true;
-        Time.timeScale = 1f;
-
-
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -166,5 +170,15 @@ public class Buttons : MonoBehaviour {
     public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+
+    public void OpenQuitMenu()
+    {
+        quitanim.SetBool("isOpen", true);
+    }
+    public void CloseQuitMenu()
+    {
+        quitanim.SetBool("isOpen", false);
     }
 }

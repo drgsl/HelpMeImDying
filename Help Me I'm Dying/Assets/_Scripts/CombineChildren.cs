@@ -53,6 +53,8 @@ public class CombineChildren : MonoBehaviour
 
             var arenderer = go.AddComponent<MeshRenderer>();
             arenderer.material = m;
+
+            go.AddComponent<MeshCollider>();
         }
     }
 

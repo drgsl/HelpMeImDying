@@ -11,8 +11,6 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Image NpcPicture;
 
-    //public DialogueTrigger dialogtrigger;
-
     public Animator animator;
 
     private Queue<string> sentences;
@@ -26,7 +24,6 @@ public class DialogueManager : MonoBehaviour
     public PlayerHealth playerHealth;
     public GameObject weapon;
     public GameObject enemyspawner;
-    public EnemyMovement enemymovements;
 
     void Start()
     {
@@ -66,7 +63,8 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -84,6 +82,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
         nameText.text = name;
         NpcPicture.sprite = sprite;
+
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -103,27 +102,28 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("IsOpen", false);
 
-        if (SceneManager.GetActiveScene().name == "Intro")
+        switch (SceneManager.GetActiveScene().buildIndex)
         {
-            fps.SavePlayer();
-            Changeable.level = 0;
-            Cursor.visible = true;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else if (SceneManager.GetActiveScene().name == "House01")
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            if (playerHealth.isLucky)
-            {
-                luckymanager.TimerStart = true;
-                weapon.SetActive(true);
-                enemyspawner.SetActive(true);
-            }
-            else
-            {
-                EnemyMovement.DialogueIsFinished = true;
-            }
+            case 1:
+                fps.SavePlayer();
+                Changeable.level = 0;
+                Cursor.visible = true;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                break;
+            default:
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                if (playerHealth.isLucky)
+                {
+                    luckymanager.TimerStart = true;
+                    weapon.SetActive(true);
+                    enemyspawner.SetActive(true);
+                }
+                else
+                {
+                    EnemyMovement.DialogueIsFinished = true;
+                }
+                break;
         }
     }
 }

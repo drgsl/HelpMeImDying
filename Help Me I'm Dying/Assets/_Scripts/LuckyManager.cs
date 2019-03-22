@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class LuckyManager : MonoBehaviour
 {
-    public float timeLeft = 300f;
-    public bool TimerStart;
+    [HideInInspector] public float timeLeft = 300f;
+    [HideInInspector] public bool TimerStart;
     public Text text;
-    public PlayerHealth playerHealth;
-    public FPS fps;
+    PlayerHealth playerHealth;
+    FPS fps;
 
     private void Awake()
     {

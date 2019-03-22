@@ -11,7 +11,8 @@ public class changeobjects : MonoBehaviour
     public float range = 5f;
     public GameObject cam;
     public Text Changeabletext;
-    public string doortext = "Press E to open the door";
+    public string doortext = "Press E to open the door!";
+    public string Handletext = "Press E to celebrate Earh Day!";
 
     void Update()
     {
@@ -36,7 +37,6 @@ public class changeobjects : MonoBehaviour
                 Changeabletext.text = doortext;
             }
 
-
             if (hit.transform.tag == "Changeable")
             {
                 Changeable target = hit.transform.GetComponent<Changeable>();
@@ -50,6 +50,43 @@ public class changeobjects : MonoBehaviour
                 {
                     target.Change();
                     Changeabletext.text = "";
+                }
+            }
+
+            if (hit.transform.tag == "Handle")
+            {
+                if (Input.GetKeyUp(KeyCode.E))
+                {
+
+                    Animator handle;
+
+                    if (hit.transform.childCount == 0)
+                    {
+                        handle = hit.transform.GetComponentInParent<Animator>();
+                    }
+                    else
+                    {
+                        handle = hit.transform.GetComponentInChildren<Animator>();
+                    }
+                    handle.SetBool("IsDown", true);
+                }
+                Changeabletext.text = Handletext;
+            }
+
+            if (hit.transform.tag == "KeycardReader")
+            {
+                Animator keycardanim = hit.transform.GetComponent<Animator>();
+                if (TargetManager.HasKeycard)
+                {
+                    Changeabletext.text = "Press E to use your Keycard";
+                    if (Input.GetKeyUp(KeyCode.E))
+                    {
+                        keycardanim.SetBool("IsOpen", true);
+                    }
+                }
+                else
+                {
+                    Changeabletext.text = "You have to find a keycard";
                 }
             }
 

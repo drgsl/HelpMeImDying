@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
-
 
 public class EnemyMovement : MonoBehaviour {
 
@@ -19,12 +17,11 @@ public class EnemyMovement : MonoBehaviour {
     public float wanderRadius = 10f;
     public float wandertimer;
 
-    private Transform target;
+    public Transform target;
     private float timer;
 
     Camera cam;
     GameObject playercam;
-    public Text SeeYou;
 
     public LuckyManager luckymanager;
 
@@ -34,6 +31,9 @@ public class EnemyMovement : MonoBehaviour {
 
     public Music music;
 
+    public GameObject otherenemy;
+
+    private bool inVision = false;
 
     private void OnEnable()
     {
@@ -84,37 +84,37 @@ public class EnemyMovement : MonoBehaviour {
 
         if (viewpos.x >= 0 && viewpos.x <= 1 && viewpos.y >= 0 && viewpos.z > 0)
         {
-            if (Physics.Linecast(transform.position, playercam.transform.position))
+            if (Physics.Linecast(this.transform.position, playercam.transform.position))
             {
-                //Debug.Log("In Vision but blocked by obj");
-                //alarmed = false;
+                Debug.Log("In Vision but blocked by obj");
                 alarmed = false;
             }
             else
             {
-                //Debug.DrawLine(transform.position, target.transform.position, Color.red, 10f, true);
-                //Debug.Log("Seen");
+                Debug.DrawLine(this.transform.position, target.transform.position, Color.red, 10f, true);
+                Debug.Log("Seen");
                 alarmed = true;
             }
         }
         else
         {
-            //Debug.Log("Not seen");
+            Debug.Log("Not seen");
             alarmed = false;
         }
 
 
-        if (luckymanager.TimerStart == false && nav.enabled == true)
+        if (nav.enabled == true)
         {
-            if (this.alarmed)
+            if (alarmed)
             {
+                Music.chaseMusic = true;
                 if (!anim.GetBool("isAlarmed"))
                 {
                     anim.SetBool("isAlarmed", true);
                 }
-                music.chaseMusic = true;
                 nav.SetDestination(target.position);
                 //SeeYou.text = this.name + " knows where you are";
+
             }
             else
             {
@@ -122,8 +122,11 @@ public class EnemyMovement : MonoBehaviour {
                 {
                     anim.SetBool("isAlarmed", false);
                 }
-                music.chaseMusic = false;
                 Wander();
+                if (!otherenemy.GetComponent<EnemyMovement>().alarmed)
+                {
+                    Music.chaseMusic = false;
+                }
                 //SeeYou.text = "Nobody knows where you are";
             }
         }
@@ -138,7 +141,7 @@ public class EnemyMovement : MonoBehaviour {
             nav.SetDestination(newPos);
             timer = 0;
             Destroy(oldloc);
-            oldloc = (GameObject)Instantiate(loc, new Vector3(newPos.x, newPos.y + 2, newPos.z), transform.rotation);
+            oldloc = Instantiate(loc, new Vector3(newPos.x, newPos.y + 2, newPos.z), transform.rotation);
             oldloc.name = "Destination"; 
         }
     }

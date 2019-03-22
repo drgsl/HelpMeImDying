@@ -22,7 +22,7 @@ public class Changeable : MonoBehaviour
 
     private void Update()
     {
-        scoretext.text = "" + level;
+        scoretext.text = "" + level +" Eco - Points";
     }
 
     public void Change()

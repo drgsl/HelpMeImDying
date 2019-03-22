@@ -10,15 +10,14 @@ public class EnemyAttack : MonoBehaviour {
 
     GameObject player;
     PlayerHealth playerHealth;
-    EnemyHealth enemyHealth;
-    bool playerInRange;
-    float timer;
-    public LuckyManager luckymanager;
+    private bool playerInRange;
+    private float timer;
+    LuckyManager luckymanager;
 
-    public GameObject[] enemies;
+    GameObject[] enemies;
 
 
-    public GameObject[] spawnpoints;
+    GameObject[] spawnpoints;
 
 
 

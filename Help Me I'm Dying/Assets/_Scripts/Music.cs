@@ -11,7 +11,7 @@ public class Music : MonoBehaviour
     public AudioClip chase;
     public AudioClip sneaky;
 
-    public bool chaseMusic;
+    public static bool chaseMusic;
 
     private void Awake()
     {
