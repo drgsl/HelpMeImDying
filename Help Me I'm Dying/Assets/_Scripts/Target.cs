@@ -26,4 +26,17 @@ public class Target : MonoBehaviour
             Changeable.level += targetScore;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            targetmanager.targetIndex++;
+            if (transform.name != "Ending Of The Maze")
+            {
+                Destroy(this.gameObject);
+            }
+            Changeable.level += targetScore;
+        }
+    }
 }

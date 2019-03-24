@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CompleteMazeLevel : MonoBehaviour
+public class StartMaze : MonoBehaviour
 {
-    GameObject player;
 
-    public LevelSelectorButton levelselectorbutton;
+    GameObject player;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject == player)
         {
-            
+            EnemySpawner.levelstarted = true;
         }
     }
 }

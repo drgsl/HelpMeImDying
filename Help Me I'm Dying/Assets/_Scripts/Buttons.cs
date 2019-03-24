@@ -16,9 +16,6 @@ public class Buttons : MonoBehaviour {
 
     public Dropdown resolutionDropdown;
 
-
-
-
     public GameObject optionsMenu;
 
     public WinMenu winmenu;
@@ -26,28 +23,16 @@ public class Buttons : MonoBehaviour {
     FPS fps;
 
     //public GameObject SaveButtons
-    GameObject player;
-    public GameObject EndMenu;
-    PlayerHealth playerHealth;
-    DialogueTrigger luckydialogtrigger;
-
-    public GameObject enemyspawner;
-
-    public GameObject maze;
-    public GameObject house;
-
     public Animator quitanim;
 
 
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
+        if (SceneManager.GetActiveScene().name != "Menu" )  
         {
-            player = GameObject.FindGameObjectWithTag("Player");
-            playerHealth = player.GetComponent<PlayerHealth>();
-            fps = player.GetComponent<FPS>();
-            luckydialogtrigger = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DialogueTrigger>();
+
+            fps = GameObject.FindGameObjectWithTag("Player").GetComponent<FPS>();
         }
 
     }
@@ -83,45 +68,7 @@ public class Buttons : MonoBehaviour {
         Changeable.level = 0;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
-
-    public void TryYourLuck()
-    {
-        if (enemyspawner!= null)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Time.timeScale = 1f;
-            Cursor.visible = true;
-
-            house.SetActive(false);
-            maze.SetActive(true);
-
-            player.gameObject.transform.position = new Vector3(0, -1000, 0);
-            EndMenu.SetActive(false);
-            playerHealth.currentHealth = playerHealth.startingHealth;
-            playerHealth.healthslider.value = playerHealth.currentHealth;
-            playerHealth.isLucky = true;
-
-            luckydialogtrigger.TriggerDialogue();
-        }
-        else
-        {
-            //play NO audio
-        }
-
-    }
-
-    //Lucky Functions
-    public void RestartGame()
-    {
-        fps.ResetProgress();
-        Cursor.lockState = CursorLockMode.None;
-        Time.timeScale = 1f;
-        Cursor.visible = true;
-        SceneManager.LoadScene("Menu");
-    }
-
-
-
+                
 
     private void Start()
     {

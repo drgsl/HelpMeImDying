@@ -80,7 +80,7 @@ public class Gun : MonoBehaviour {
         RaycastHit hit; 
         if(Physics.Raycast(fpscam.transform.position, fpscam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
 
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)

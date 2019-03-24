@@ -17,21 +17,13 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> names;
     private Queue<Sprite> sprites;
 
-    public LuckyManager luckymanager;
-
-    private int spriteindex;
     public FPS fps;
-    public PlayerHealth playerHealth;
-    public GameObject weapon;
-    public GameObject enemyspawner;
 
     void Start()
     {
         sentences = new Queue<string>();
         names = new Queue<string>();
         sprites = new Queue<Sprite>();
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        luckymanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LuckyManager>();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -113,16 +105,7 @@ public class DialogueManager : MonoBehaviour
             default:
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-                if (playerHealth.isLucky)
-                {
-                    luckymanager.TimerStart = true;
-                    weapon.SetActive(true);
-                    enemyspawner.SetActive(true);
-                }
-                else
-                {
-                    EnemyMovement.DialogueIsFinished = true;
-                }
+                EnemyMovement.DialogueIsFinished = true;
                 break;
         }
     }

@@ -15,14 +15,11 @@ public class PlayerHealth : MonoBehaviour {
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
     public GameObject NormalEndMenu;
-    public GameObject LuckyEndMenu;
 
     Animator anim;
     AudioSource playerAudio;
     bool isDead;
     bool damaged;
-
-    public bool isLucky = false;
 
 	// Use this for initialization
 	void Start () {
@@ -56,19 +53,12 @@ public class PlayerHealth : MonoBehaviour {
         healthslider.value = currentHealth;
         playerAudio.Play();
 
-        if (currentHealth <=0 && !isDead)
+        if (currentHealth <= 0 && !isDead)
         {
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
             Cursor.visible = true;
-            if (isLucky)
-            {
-                LuckyEndMenu.SetActive(true);
-            }
-            else
-            {
-                NormalEndMenu.SetActive(true);
-            }
+            NormalEndMenu.SetActive(true);
         }
     }
 

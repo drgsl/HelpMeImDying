@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour {
+public class EnemyAttack : MonoBehaviour
+{
 
     public float timeBetweenAttacks = .5f;
     public int attackDamage = 10;
@@ -12,7 +13,6 @@ public class EnemyAttack : MonoBehaviour {
     PlayerHealth playerHealth;
     private bool playerInRange;
     private float timer;
-    LuckyManager luckymanager;
 
     GameObject[] enemies;
 
@@ -22,9 +22,8 @@ public class EnemyAttack : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake () {
-        luckymanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LuckyManager>();
-
+    void Awake()
+    {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -53,37 +52,35 @@ public class EnemyAttack : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
         timer += Time.deltaTime;
-        if(timer >= timeBetweenAttacks && playerInRange)
+        if (timer >= timeBetweenAttacks && playerInRange)
         {
             Attack();
         }
 
-        if(playerHealth.currentHealth <= 0)
+        if (playerHealth.currentHealth <= 0)
         {
             //tell the anim the player is dead
         }
 
-	}
+    }
 
 
     void Attack()
     {
-        timer = 0f; 
-        if(playerHealth.currentHealth > 0)
+        timer = 0f;
+        if (playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage(attackDamage);
-            if (luckymanager.TimerStart == false)
+            player.gameObject.transform.position = new Vector3(0, 1, 0);
+            for (int i = 0; i < enemies.Length; i++)
             {
-                player.gameObject.transform.position = new Vector3(0, 1, 0);
-                for (int i = 0; i < enemies.Length; i++)
-                {
-                    EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
-                    enemymovement.alarmed = false;
-                    enemies[i].transform.position = spawnpoints[i].transform.position;
-                }
+                EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
+                enemymovement.alarmed = false;
+                enemies[i].transform.position = spawnpoints[i].transform.position;
             }
         }
     }

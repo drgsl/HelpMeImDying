@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
 
     int i = 0;
 
+    public static bool levelstarted = false;
+
     // Use this for initialization
     void Start()
     {
@@ -25,13 +27,20 @@ public class EnemySpawner : MonoBehaviour
         {
             return;
         }
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
-        int index = Random.Range(0, enemies.Length);
+        if (levelstarted)
+        {
 
-        GameObject obj = Instantiate(enemies[index], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-        i++;
-        obj.name = i + ". " + enemies[index].name;
-        obj.transform.parent = this.transform;
+            Debug.Log("Started");
+
+            int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+
+            int index = Random.Range(0, enemies.Length);
+
+            GameObject obj = Instantiate(enemies[index], spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            i++;
+            obj.name = i + ". " + enemies[index].name;
+            obj.transform.parent = this.transform;
+        }
     }
 }

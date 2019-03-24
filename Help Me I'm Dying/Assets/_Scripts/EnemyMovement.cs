@@ -23,17 +23,11 @@ public class EnemyMovement : MonoBehaviour {
     Camera cam;
     GameObject playercam;
 
-    public LuckyManager luckymanager;
-
     public static bool DialogueIsFinished = false;
 
     public Animator anim;
 
-    public Music music;
-
     public GameObject otherenemy;
-
-    private bool inVision = false;
 
     private void OnEnable()
     {
@@ -43,17 +37,12 @@ public class EnemyMovement : MonoBehaviour {
     // Use this for initialization
     void Awake ()
     {
-        luckymanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<LuckyManager>();
-
-
         player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
         nav = GetComponent<NavMeshAgent>();
 
         playercam = GameObject.FindGameObjectWithTag("MainCamera");
         cam = GetComponent<Camera>();
-
-        music = GameObject.FindGameObjectWithTag("music").GetComponent<Music>();
     }
 	
 	// Update is called once per frame
@@ -86,19 +75,19 @@ public class EnemyMovement : MonoBehaviour {
         {
             if (Physics.Linecast(this.transform.position, playercam.transform.position))
             {
-                Debug.Log("In Vision but blocked by obj");
+                //Debug.Log("In Vision but blocked by obj");
                 alarmed = false;
             }
             else
             {
                 Debug.DrawLine(this.transform.position, target.transform.position, Color.red, 10f, true);
-                Debug.Log("Seen");
+                //Debug.Log("Seen");
                 alarmed = true;
             }
         }
         else
         {
-            Debug.Log("Not seen");
+            //Debug.Log("Not seen");
             alarmed = false;
         }
 

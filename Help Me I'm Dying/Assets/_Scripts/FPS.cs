@@ -26,16 +26,12 @@ public class FPS : MonoBehaviour {
 
     private Camera m_Camera;
 
-    GameObject enemy;
-
     // Use this for initialization
     void Awake() {
         SavePlayer();
         Cursor.lockState = CursorLockMode.Locked;
         m_rigid = GetComponent<Rigidbody>();
         m_Camera = GetComponentInChildren<Camera>();
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-
     }
 
     // Update is called once per frame
@@ -145,13 +141,5 @@ public class FPS : MonoBehaviour {
         //transform.position = position;
 
         Debug.Log("Loaded");
-    }
-
-    public void ResetProgress()
-    {
-        Changeable.level = 0;
-        //transform.position = Vector3.zero;
-        Debug.Log("Reseted");
-        SavePlayer();
     }
 }

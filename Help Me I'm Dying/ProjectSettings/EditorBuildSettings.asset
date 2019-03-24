@@ -15,9 +15,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/House01.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/_Scenes/EarthDay.unity
-    guid: f6dc052415700e3409d32b60b0a122ed
-  - enabled: 1
     path: Assets/_Scenes/Maze.unity
     guid: 64d261c1ee71eab4e96d7aa3ad658da9
+  - enabled: 1
+    path: Assets/_Scenes/EarthDay.unity
+    guid: f6dc052415700e3409d32b60b0a122ed
   m_configObjects: {}

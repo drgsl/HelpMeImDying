@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class TargetManager : MonoBehaviour
 {
 
     LineRenderer lineRenderer;
 
-    public bool easymode = false;
+    public bool easymode = true;
     public GameObject[] targets;
 
     [HideInInspector] public int targetIndex = 0;
@@ -38,7 +37,7 @@ public class TargetManager : MonoBehaviour
 
         Handle = GameObject.FindGameObjectWithTag("Handle");
 
-        for (int i = 0; i < targets.Length; i++)
+        for (int i = 1; i < targets.Length; i++)
         {
             targets[i].SetActive(false);
         }
@@ -83,11 +82,11 @@ public class TargetManager : MonoBehaviour
         {
             if (targetIndex == 0)
             {
-                TargetText.text = " You should find your " + targets[targetIndex].name;
+                TargetText.text = " You should find " + targets[targetIndex].name;
             }
             else
             {
-                TargetText.text = " You should find your " + targets[targetIndex].name + " now ";
+                TargetText.text = " You should find " + targets[targetIndex].name + " now ";
             }
         }
         else
