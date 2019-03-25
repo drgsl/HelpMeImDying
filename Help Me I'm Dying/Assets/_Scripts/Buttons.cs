@@ -50,13 +50,6 @@ public class Buttons : MonoBehaviour {
 
     public void QuitGame()
     {
-        if (winmenu != null)
-        {
-            if (winmenu.Finished)
-            {
-                fps.SavePlayer();
-            }
-        }
         Application.Quit();
         Debug.Log("Quitting game....");
     }
@@ -127,5 +120,11 @@ public class Buttons : MonoBehaviour {
     public void CloseQuitMenu()
     {
         quitanim.SetBool("isOpen", false);
+    }
+
+    public void nextLevel()
+    {
+        fps.SavePlayer();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

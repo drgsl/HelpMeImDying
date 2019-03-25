@@ -48,6 +48,7 @@ public class FPS : MonoBehaviour {
     {
         if (m_rigid)
         {
+
             y = Input.GetAxis("Jump") * 2;
 
             if (isGrounded && y != 0)

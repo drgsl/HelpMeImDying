@@ -15,15 +15,22 @@ public class StationEnemy : MonoBehaviour
 
     private float timer;
 
+     GameObject winmenu;
+
 
 
     GameObject player;
     PlayerHealth playerHealth;
     public int attackDamage = 10;
 
+    AudioSource audiosource;
+    public AudioClip attack;
+
     // Start is called before the first frame update
     void Start()
     {
+        winmenu = GameObject.FindGameObjectWithTag("WinMenu");
+        audiosource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
         nav = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
@@ -63,8 +70,9 @@ public class StationEnemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == player)
+        if (collision.gameObject == player && !winmenu.activeSelf)
         {
+            audiosource.PlayOneShot(attack);
             playerHealth.TakeDamage(attackDamage);
             player.gameObject.transform.position = new Vector3(0, 1, 0);
         }

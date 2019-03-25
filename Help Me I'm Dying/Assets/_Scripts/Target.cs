@@ -8,6 +8,7 @@ public class Target : MonoBehaviour
     public TargetManager targetmanager;
 
     public int targetScore;
+    FPS fps;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,8 @@ public class Target : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         targetmanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<TargetManager>();
+
+        fps = player.GetComponent<FPS>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -24,6 +27,7 @@ public class Target : MonoBehaviour
             targetmanager.targetIndex++;
             Destroy(this.gameObject);
             Changeable.level += targetScore;
+            fps.SavePlayer();
         }
     }
 
@@ -32,11 +36,12 @@ public class Target : MonoBehaviour
         if (other.gameObject == player)
         {
             targetmanager.targetIndex++;
+            Changeable.level += targetScore;
+            fps.SavePlayer();
             if (transform.name != "Ending Of The Maze")
             {
                 Destroy(this.gameObject);
             }
-            Changeable.level += targetScore;
         }
     }
 }

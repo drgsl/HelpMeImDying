@@ -262,6 +262,7 @@ MonoBehaviour:
   Changeabletext: {fileID: 0}
   doortext: Press E to open the door
   Handletext: Press E to celebrate Earh Day!
+  woosh: {fileID: 8300000, guid: 0a366a6fc5c24854dab98a8d48883b61, type: 3}
 --- !u!114 &69
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,6 +14,17 @@ public class changeobjects : MonoBehaviour
     public string doortext = "Press E to open the door!";
     public string Handletext = "Press E to celebrate Earh Day!";
 
+    AudioSource audiosource;
+    public AudioClip woosh;
+
+    FPS fps;
+
+    private void Awake()
+    {
+        audiosource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+        fps = GameObject.FindGameObjectWithTag("Player").GetComponent<FPS>();
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -39,6 +50,7 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "Changeable")
             {
+                fps.SavePlayer();
                 Changeable target = hit.transform.GetComponent<Changeable>();
 
                 if(Changeable.level >= target.neededlvl)
@@ -48,6 +60,7 @@ public class changeobjects : MonoBehaviour
 
                 if (Input.GetKeyUp(KeyCode.E))
                 {
+                    audiosource.PlayOneShot(woosh);
                     target.Change();
                     Changeabletext.text = "";
                 }
@@ -55,6 +68,7 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "Handle")
             {
+                fps.SavePlayer();
                 if (Input.GetKeyUp(KeyCode.E))
                 {
 
@@ -75,6 +89,7 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "KeycardReader")
             {
+                fps.SavePlayer();
                 Animator keycardanim = hit.transform.GetComponent<Animator>();
                 if (TargetManager.HasKeycard)
                 {

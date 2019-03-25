@@ -19,7 +19,10 @@ public class EnemyAttack : MonoBehaviour
 
     GameObject[] spawnpoints;
 
+    AudioSource audiosource;
+    public AudioClip attack;
 
+    GameObject winmenu;
 
     // Use this for initialization
     void Awake()
@@ -31,6 +34,11 @@ public class EnemyAttack : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHealth>();
 
         spawnpoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+
+        audiosource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+
+        winmenu = GameObject.FindGameObjectWithTag("WinMenu");
+
     }
 
 
@@ -71,17 +79,22 @@ public class EnemyAttack : MonoBehaviour
 
     void Attack()
     {
-        timer = 0f;
-        if (playerHealth.currentHealth > 0)
+        if (!winmenu.activeSelf)
         {
-            playerHealth.TakeDamage(attackDamage);
-            player.gameObject.transform.position = new Vector3(0, 1, 0);
-            for (int i = 0; i < enemies.Length; i++)
+            audiosource.PlayOneShot(attack);
+            timer = 0f;
+            if (playerHealth.currentHealth > 0)
             {
-                EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
-                enemymovement.alarmed = false;
-                enemies[i].transform.position = spawnpoints[i].transform.position;
+                playerHealth.TakeDamage(attackDamage);
+                player.gameObject.transform.position = new Vector3(0, 1, 0);
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
+                    enemymovement.alarmed = false;
+                    enemies[i].transform.position = spawnpoints[i].transform.position;
+                }
             }
         }
+
     }
 }

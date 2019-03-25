@@ -15,9 +15,18 @@ public class MazeEnemyMovement : MonoBehaviour
     private bool playerInRange;
     private float timer;
 
+    AudioSource audiosource;
+    public AudioClip attack;
+
+     GameObject winmenu;
+
     // Start is called before the first frame update
     void Start()
     {
+        winmenu = GameObject.FindGameObjectWithTag("WinMenu");
+
+        audiosource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<PlayerHealth>();
 
@@ -54,10 +63,15 @@ public class MazeEnemyMovement : MonoBehaviour
 
     void Attack()
     {
-        timer = 0f;
-        if (playerHealth.currentHealth > 0)
+        if (!winmenu.activeSelf)
         {
-            playerHealth.TakeDamage(attackDamage);
+            audiosource.PlayOneShot(attack);
+            timer = 0f;
+            if (playerHealth.currentHealth > 0)
+            {
+                playerHealth.TakeDamage(attackDamage);
+            }
         }
+
     }
 }

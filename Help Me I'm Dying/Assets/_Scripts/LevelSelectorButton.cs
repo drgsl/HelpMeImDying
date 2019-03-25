@@ -19,9 +19,15 @@ public class LevelSelectorButton : MonoBehaviour
 
     FPS player;
 
+    Text loadingText;
+
+    string[] Tips = {"lol", "HaHa" };
+    int tipIndex;
+
     private void Awake()
     {
         button = GetComponent<Button>();
+        loadingText = LoadingScreen.GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -62,6 +68,10 @@ public class LevelSelectorButton : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(index);//SceneManager.GetActiveScene().buildIndex + 1);
 
         LoadingScreen.SetActive(true);
+
+        tipIndex = Random.Range(0, Tips.Length);
+
+        loadingText.text = Tips[0];
 
         while (!operation.isDone)
         {

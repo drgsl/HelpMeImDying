@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 1
   attackDamage: 1
+  attack: {fileID: 8300000, guid: 0a366a6fc5c24854dab98a8d48883b61, type: 3}
 --- !u!1 &4148214763888398322
 GameObject:
   m_ObjectHideFlags: 0
