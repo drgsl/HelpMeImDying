@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414735, b: 0.1210785, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731725, g: 0.13414745, b: 0.12107873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -634,8 +634,6 @@ MonoBehaviour:
     - Moon
     - Moon
     - Moon
-    - Blue Flamingo
-    - Blue Flamingo
     sentences:
     - Psst
     - Hey, you!
@@ -656,8 +654,6 @@ MonoBehaviour:
     - But we dont have any other choice
     - Now go!
     - Go and save the world!
-    - Hi, I know you don't know me, but I know you very very well
-    - I just came by to tell you to not try your luck, it's not worth it!
     sprites:
     - {fileID: 21300000, guid: 6095eb3c7063bee4cae156ea5f90bcb7, type: 3}
     - {fileID: 21300000, guid: 6095eb3c7063bee4cae156ea5f90bcb7, type: 3}
@@ -677,8 +673,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: c12f05d08b141f54f89a713b81083daf, type: 3}
     - {fileID: 21300000, guid: 0b4966fdb7f2fe34e9da4c9f4e6b74e2, type: 3}
     - {fileID: 21300000, guid: c12f05d08b141f54f89a713b81083daf, type: 3}
-    - {fileID: 21300000, guid: 6dab077c42365244fa35f7824a28b0ab, type: 3}
-    - {fileID: 21300000, guid: 6dab077c42365244fa35f7824a28b0ab, type: 3}
 --- !u!1 &773227463
 GameObject:
   m_ObjectHideFlags: 0

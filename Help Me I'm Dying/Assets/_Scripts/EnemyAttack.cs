@@ -58,7 +58,6 @@ public class EnemyAttack : MonoBehaviour
             playerInRange = false;
         }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -79,22 +78,19 @@ public class EnemyAttack : MonoBehaviour
 
     void Attack()
     {
-        if (!winmenu.activeSelf)
+        audiosource.PlayOneShot(attack);
+        timer = 0f;
+        if (playerHealth.currentHealth > 0)
         {
-            audiosource.PlayOneShot(attack);
-            timer = 0f;
-            if (playerHealth.currentHealth > 0)
+            playerHealth.TakeDamage(attackDamage);
+            player.gameObject.transform.position = new Vector3(0, 1, 0);
+            for (int i = 0; i < enemies.Length; i++)
             {
-                playerHealth.TakeDamage(attackDamage);
-                player.gameObject.transform.position = new Vector3(0, 1, 0);
-                for (int i = 0; i < enemies.Length; i++)
-                {
-                    EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
-                    enemymovement.alarmed = false;
-                    enemies[i].transform.position = spawnpoints[i].transform.position;
-                }
+                EnemyMovement enemymovement = enemies[i].GetComponent<EnemyMovement>();
+                enemymovement.alarmed = false;
+                enemies[i].transform.position = spawnpoints[i].transform.position;
             }
         }
-
     }
+
 }

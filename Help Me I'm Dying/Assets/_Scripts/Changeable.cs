@@ -9,15 +9,17 @@ public class Changeable : MonoBehaviour
     public GameObject changed;
     public int value;
     public int neededlvl;
-    public static float level = -1;
+    public static int level = -1;
     Text scoretext;
     public string changetext = "Press E to help the planet";
+
     FPS fps;
 
 
     private void Awake()
     {
         scoretext = GameObject.Find("ScoreText").GetComponentInChildren<Text>();
+        fps = GameObject.FindGameObjectWithTag("Player").GetComponent<FPS>();
     }
 
     private void Update()
@@ -32,6 +34,7 @@ public class Changeable : MonoBehaviour
             level += value;
             //GameObject newobj = 
             Instantiate(changed, transform.position, transform.rotation);
+            fps.SavePlayer();
             //newobj.transform.localScale = gameObject.transform.localScale;
             Destroy(gameObject);
         }

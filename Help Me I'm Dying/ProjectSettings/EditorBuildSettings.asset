@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/EarthDay.unity
     guid: f6dc052415700e3409d32b60b0a122ed
+  - enabled: 1
+    path: Assets/_Scenes/Credits.unity
+    guid: 9f53ec065f22aca4f8dc1f03a3761607
   m_configObjects: {}

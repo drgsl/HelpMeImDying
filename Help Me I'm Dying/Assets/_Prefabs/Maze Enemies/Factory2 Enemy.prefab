@@ -76,7 +76,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: Infinity
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 1
   attackDamage: 1
+  attack: {fileID: 8300000, guid: 943b24032da1a3045b3b0bec124d2c0f, type: 3}
 --- !u!1 &4148214763888398322
 GameObject:
   m_ObjectHideFlags: 0

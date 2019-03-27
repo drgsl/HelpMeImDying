@@ -56,10 +56,11 @@ public class SecondTargetManager : MonoBehaviour
         {
             lineRenderer.positionCount = 0;
         }
+        TargetText.text = "You can change the " + GetClosestEnemy(transArray).name;
 
     }
 
-    Transform GetClosestEnemy(Transform[] enemies)
+    public Transform GetClosestEnemy(Transform[] enemies)
     {
         Transform bestTarget = null;
         float closestDistanceSqr = Mathf.Infinity;

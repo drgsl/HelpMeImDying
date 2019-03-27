@@ -21,7 +21,11 @@ public class LevelSelectorButton : MonoBehaviour
 
     Text loadingText;
 
-    string[] Tips = {"lol", "HaHa" };
+    string[] Tips = new string[] {  "The area of forests we lose every minute is equivalent to 48 football fields.",
+                                    "Approximately 600,000 deaths occurred worldwide as a result of weather-related natural disasters",
+                                    "2014 was the world’s hottest year on record, surpassing the previous record set in 2010, tied with 2005.",
+                                    "There is more carbon dioxide in the atmosphere today than at any point in the past 800,000 years",
+                                    "Since the beginning of the Industrial Revolution, the acidity of surface ocean waters has increased by about 30 percent."};
     int tipIndex;
 
     private void Awake()
@@ -70,8 +74,7 @@ public class LevelSelectorButton : MonoBehaviour
         LoadingScreen.SetActive(true);
 
         tipIndex = Random.Range(0, Tips.Length);
-
-        loadingText.text = Tips[0];
+        loadingText.text = Tips[tipIndex];
 
         while (!operation.isDone)
         {
@@ -80,6 +83,7 @@ public class LevelSelectorButton : MonoBehaviour
 
             slider.value = progress;
             progresstext.text = progress * 100 + "%";
+
 
             yield return null;
         }

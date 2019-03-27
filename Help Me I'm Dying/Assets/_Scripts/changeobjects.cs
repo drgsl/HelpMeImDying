@@ -50,10 +50,9 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "Changeable")
             {
-                fps.SavePlayer();
                 Changeable target = hit.transform.GetComponent<Changeable>();
 
-                if(Changeable.level >= target.neededlvl)
+                if (Changeable.level >= target.neededlvl)
                     Changeabletext.text = target.changetext;
                 else
                     Changeabletext.text = "You must have at least " + target.neededlvl + " points to change this";
@@ -68,7 +67,6 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "Handle")
             {
-                fps.SavePlayer();
                 if (Input.GetKeyUp(KeyCode.E))
                 {
 
@@ -89,7 +87,6 @@ public class changeobjects : MonoBehaviour
 
             if (hit.transform.tag == "KeycardReader")
             {
-                fps.SavePlayer();
                 Animator keycardanim = hit.transform.GetComponent<Animator>();
                 if (TargetManager.HasKeycard)
                 {

@@ -97,8 +97,8 @@ public class DialogueManager : MonoBehaviour
         switch (SceneManager.GetActiveScene().buildIndex)
         {
             case 1:
+                Changeable.level ++;
                 fps.SavePlayer();
-                Changeable.level = 0;
                 Cursor.visible = true;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 break;

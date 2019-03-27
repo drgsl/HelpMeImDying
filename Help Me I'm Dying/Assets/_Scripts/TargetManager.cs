@@ -21,6 +21,8 @@ public class TargetManager : MonoBehaviour
 
     public GameObject Handle;
 
+    public bool mazelevel;
+
     void Start()
     {
 
@@ -37,10 +39,12 @@ public class TargetManager : MonoBehaviour
 
         Handle = GameObject.FindGameObjectWithTag("Handle");
 
-        for (int i = 1; i < targets.Length; i++)
-        {
-            targets[i].SetActive(false);
-        }
+            for (int i = 1; i < targets.Length; i++)
+            {
+                targets[i].SetActive(false);
+            }
+
+        HasKeycard = false;
 
     }
 
@@ -80,6 +84,11 @@ public class TargetManager : MonoBehaviour
 
         if (targetIndex != targets.Length)
         {
+            if (!targets[targetIndex].activeSelf)
+            {
+                targets[targetIndex].SetActive(true);
+            }
+
             if (targetIndex == 0)
             {
                 TargetText.text = " You should find " + targets[targetIndex].name;

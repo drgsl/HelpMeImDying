@@ -70,7 +70,7 @@ public class StationEnemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == player && !winmenu.activeSelf)
+        if (collision.gameObject == player)
         {
             audiosource.PlayOneShot(attack);
             playerHealth.TakeDamage(attackDamage);

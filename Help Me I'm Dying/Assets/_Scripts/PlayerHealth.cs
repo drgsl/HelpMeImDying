@@ -28,10 +28,10 @@ public class PlayerHealth : MonoBehaviour {
 
         currentHealth = startingHealth;
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
+    // Update is called once per frame
+    void Update()
+    {
         if (damaged)
         {
             damageImage.color = flashColour;
@@ -40,10 +40,8 @@ public class PlayerHealth : MonoBehaviour {
         {
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
-        damaged = false; 
-
-
-	}
+        damaged = false;
+    }
 
 
     public void TakeDamage(int amount)

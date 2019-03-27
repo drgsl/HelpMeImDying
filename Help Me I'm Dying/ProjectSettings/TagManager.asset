@@ -17,6 +17,7 @@ TagManager:
   - Handle
   - KeycardReader
   - WinMenu
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX

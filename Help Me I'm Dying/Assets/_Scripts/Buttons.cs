@@ -41,11 +41,7 @@ public class Buttons : MonoBehaviour {
     {
         Cursor.visible = true;
         Time.timeScale = 1f;
-        if (winmenu.Finished)
-        {
-            fps.SavePlayer();
-        }
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
@@ -58,7 +54,6 @@ public class Buttons : MonoBehaviour {
     {
         Time.timeScale = 1f;
         fps.LoadPlayer();
-        Changeable.level = 0;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
                 

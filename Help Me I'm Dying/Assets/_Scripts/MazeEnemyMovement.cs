@@ -9,7 +9,7 @@ public class MazeEnemyMovement : MonoBehaviour
     public float timeBetweenAttacks = .5f;
     public int attackDamage = 10;
 
-    private Transform player;
+    private GameObject player;
     NavMeshAgent nav;
     PlayerHealth playerHealth;
     private bool playerInRange;
@@ -18,16 +18,12 @@ public class MazeEnemyMovement : MonoBehaviour
     AudioSource audiosource;
     public AudioClip attack;
 
-     GameObject winmenu;
-
     // Start is called before the first frame update
     void Start()
     {
-        winmenu = GameObject.FindGameObjectWithTag("WinMenu");
-
         audiosource = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioSource>();
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<PlayerHealth>();
 
         nav = GetComponent<NavMeshAgent>();
@@ -42,7 +38,7 @@ public class MazeEnemyMovement : MonoBehaviour
             Attack();
         }
 
-        nav.SetDestination(player.position);
+        nav.SetDestination(player.transform.position);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,15 +59,12 @@ public class MazeEnemyMovement : MonoBehaviour
 
     void Attack()
     {
-        if (!winmenu.activeSelf)
+        audiosource.PlayOneShot(attack);
+        timer = 0f;
+        if (playerHealth.currentHealth > 0)
         {
-            audiosource.PlayOneShot(attack);
-            timer = 0f;
-            if (playerHealth.currentHealth > 0)
-            {
-                playerHealth.TakeDamage(attackDamage);
-            }
+            playerHealth.TakeDamage(attackDamage);
         }
-
     }
+
 }

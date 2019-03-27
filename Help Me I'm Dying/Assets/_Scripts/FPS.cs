@@ -28,7 +28,6 @@ public class FPS : MonoBehaviour {
 
     // Use this for initialization
     void Awake() {
-        SavePlayer();
         Cursor.lockState = CursorLockMode.Locked;
         m_rigid = GetComponent<Rigidbody>();
         m_Camera = GetComponentInChildren<Camera>();
@@ -46,6 +45,8 @@ public class FPS : MonoBehaviour {
 
     void Update()
     {
+
+
         if (m_rigid)
         {
 
@@ -125,8 +126,10 @@ public class FPS : MonoBehaviour {
 
     public void SavePlayer()
     {
+        level = Changeable.level;
         SaveSystem.SavePlayer(this);
         Debug.Log("Saved");
+        Debug.Log("Changeable : " + Changeable.level);
     }
 
     public void LoadPlayer()
@@ -142,5 +145,12 @@ public class FPS : MonoBehaviour {
         //transform.position = position;
 
         Debug.Log("Loaded");
+        Debug.Log(data.level);
+    }
+
+    public void ResetProgress()
+    {
+        Changeable.level = -1;
+        SavePlayer();
     }
 }

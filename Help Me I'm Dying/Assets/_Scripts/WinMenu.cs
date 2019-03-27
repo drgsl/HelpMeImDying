@@ -15,7 +15,6 @@ public class WinMenu : MonoBehaviour
     {
         if (Changeable.level >= NeededLevelToFinish && !Finished)
         {
-            winmenu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
             Cursor.visible = true;
