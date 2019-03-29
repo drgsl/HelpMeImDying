@@ -1,11 +1,11 @@
 <p align="center"><img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Sprites/IMG_6773.PNG" width="30%" /></p>
 
 ## Despre
-[**Help Me I'm Dying**](https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH) Este un joc care îți atrage atenția că trăiești în natură și depinzi de armonia mediului înconjurător. Este cât se poate de evident faptul că stă în puterea noastră să ajutăm la salvarea mediului. Prezentând o problemă ecologică generației tinere sub forma unui joc, ne-am dorit să îi facem să se concentreze asupra ceea ce este cu adevărat important: **Reduce Refolosește Reciclează!**♻️
+[**Help Me I'm Dying**](https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH) Este un joc care îți atrage atenția că trăiești în natură și depinzi de armonia mediului înconjurător. Este cât se poate de evident faptul că stă în puterea noastră să ajutăm la salvarea mediului. Prezentând o problemă ecologică generației tinere sub forma unui joc, ne-am dorit să îi facem să se concentreze asupra ceea ce este cu adevărat important: **Reduce Refolosește Reciclează!**  ♻️
 
-## Trailer + Demo Joc
+## Prezentare Video Joc
 
-
+Demo-ul cat si trailer-ul jocului sunt prezente pe canalul nostru de [**Youtube**](https://www.youtube.com/channel/UCnfmjIer7FwbQN9TNDT4m_Q?view_as=subscriber)
 
 ## De unde il pot juca?
 
@@ -18,7 +18,9 @@ De aici: https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH
 * Photoshop
 
 ## Echipa
-Jocul [**Help Me I'm Dying**](https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH)  a fost creat de către echipa **Blue Flamingo** în cadrul participării la concursul [**FIICode 2019**](https://fiicode.asii.ro/).
+
+Jocul [**Help Me I'm Dying**](https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH)  a fost creat de către echipa [**Blue Flamingo**](https://www.youtube.com/channel/UCnfmjIer7FwbQN9TNDT4m_Q?view_as=subscriber) în cadrul participării la concursul [**FIICode 2019**](https://fiicode.asii.ro/). Echipa este formată din:
+
 * Bobu Dragos-Andrei
 * Entuc Maria-Raluca
 
