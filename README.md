@@ -6,6 +6,7 @@
 ## Tehnologii utilizate
 * Unity
 * C#
+* Photoshop
 
 ## Echipa
 Jocul Help Me I'm Dying a fost creat de către echipa **Blue Flamingo** în cadrul participării la concursul [**FIICode 2019**](https://fiicode.asii.ro/).
