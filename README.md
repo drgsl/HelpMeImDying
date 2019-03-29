@@ -9,7 +9,7 @@
 
 ## De unde il pot juca?
 
-https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH
+De aici: https://drive.google.com/open?id=1JCdQDLg_ucRCmLBbpFstIgSHNy3Ry-JH
 
 
 ## Tehnologii utilizate
