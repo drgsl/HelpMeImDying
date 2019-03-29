@@ -54,6 +54,10 @@ public class Music : MonoBehaviour
                 audioSource.Play();
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Credits")
+        {
+            audioSource.Pause();
+        }
         else
         {
             if (audioSource.clip != orchestra)

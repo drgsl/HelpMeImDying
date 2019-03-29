@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1245383484424078896}
   - component: {fileID: 1245383484422150396}
   - component: {fileID: 1245383484422150397}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Non Eco Dumpster
   m_TagString: Changeable
   m_Icon: {fileID: 0}

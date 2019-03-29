@@ -110,7 +110,7 @@ MonoBehaviour:
   wanderRadius: 50
   wandertimer: 5
   attackDamage: 2
-  attack: {fileID: 8300000, guid: 16985f5909455f54aafb560befe8cdc1, type: 3}
+  attack: {fileID: 8300000, guid: 943b24032da1a3045b3b0bec124d2c0f, type: 3}
 --- !u!195 &2930330053724468000
 NavMeshAgent:
   m_ObjectHideFlags: 0

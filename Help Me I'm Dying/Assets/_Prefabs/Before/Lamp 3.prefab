@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7572849198833250032}
   - component: {fileID: 7572849198835183668}
   - component: {fileID: 7572849198835183669}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Lamp 3
   m_TagString: Changeable
   m_Icon: {fileID: 0}

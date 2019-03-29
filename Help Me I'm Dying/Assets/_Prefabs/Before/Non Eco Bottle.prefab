@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6365877991387347620}
   - component: {fileID: 6365877991389275233}
   - component: {fileID: 6365877991389275235}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Non Eco Bottle
   m_TagString: Changeable
   m_Icon: {fileID: 0}

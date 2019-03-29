@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 5255834841022217683}
   - component: {fileID: 5255834841022217680}
   - component: {fileID: 5255834841022217681}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Non Eco LightBulb
   m_TagString: Changeable
   m_Icon: {fileID: 0}

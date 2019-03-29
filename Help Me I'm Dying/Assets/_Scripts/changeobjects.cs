@@ -11,7 +11,8 @@ public class changeobjects : MonoBehaviour
     public float range = 5f;
     public GameObject cam;
     public Text Changeabletext;
-    public string doortext = "Press E to open the door!";
+    public string doortextOpen = "Press E to open the door!";
+    public string doortextClose = "Press E to close the door!";
     public string Handletext = "Press E to celebrate Earh Day!";
 
     AudioSource audiosource;
@@ -33,21 +34,27 @@ public class changeobjects : MonoBehaviour
         {
             if (hit.transform.tag == "Door")
             {
-                if (Input.GetKeyUp(KeyCode.E))
+                Animator door = hit.transform.GetComponent<Animator>();
+                if (door.GetBool("IsOpen"))
                 {
-                    Animator door = hit.transform.GetComponent<Animator>();
-                    if (door.GetBool("IsOpen"))
+                    Changeabletext.text = doortextClose;
+                    if (Input.GetKeyUp(KeyCode.E))
                     {
                         door.SetBool("IsOpen", false);
                     }
-                    else
+                }
+                else
+                {
+                    Changeabletext.text = doortextOpen;
+                    if (Input.GetKeyUp(KeyCode.E))
                     {
                         door.SetBool("IsOpen", true);
                     }
                 }
-                Changeabletext.text = doortext;
             }
-
+        }
+        if (hit.transform != null)
+        {
             if (hit.transform.tag == "Changeable")
             {
                 Changeable target = hit.transform.GetComponent<Changeable>();

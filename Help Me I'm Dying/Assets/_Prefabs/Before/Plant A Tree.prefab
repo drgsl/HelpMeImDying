@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1243221416305641384}
   - component: {fileID: 1243221416305641385}
   - component: {fileID: 1243221416305641386}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Plant A Tree
   m_TagString: Changeable
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}

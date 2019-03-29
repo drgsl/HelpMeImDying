@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SecondTargetManager : MonoBehaviour
 {
@@ -42,6 +43,21 @@ public class SecondTargetManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetClosestEnemy(transArray) == null)
+        {
+            Time.timeScale = 1f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            MenuButton.LevelSelectorActive = true;
+
+            SceneManager.LoadScene("Menu");
+        }
+        else
+        {
+            string LayerIndex = LayerMask.LayerToName(GetClosestEnemy(transArray).gameObject.layer);
+            TargetText.text = "You can " + LayerIndex;
+        }
+
         if (easymode)
         {
             if (lineRenderer.positionCount != 2)
@@ -56,7 +72,6 @@ public class SecondTargetManager : MonoBehaviour
         {
             lineRenderer.positionCount = 0;
         }
-        TargetText.text = "You can change the " + GetClosestEnemy(transArray).name;
 
     }
 

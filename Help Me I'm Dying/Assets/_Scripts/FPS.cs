@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPS : MonoBehaviour {
 
-    private float speed = 7.5f;
+    private float speed = 9f;
 
     public int level = 0; 
 
@@ -26,11 +26,14 @@ public class FPS : MonoBehaviour {
 
     private Camera m_Camera;
 
+    Animator LoadingAnim;
+
     // Use this for initialization
     void Awake() {
         Cursor.lockState = CursorLockMode.Locked;
         m_rigid = GetComponent<Rigidbody>();
         m_Camera = GetComponentInChildren<Camera>();
+        LoadingAnim = GameObject.FindGameObjectWithTag("Loading").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -128,8 +131,13 @@ public class FPS : MonoBehaviour {
     {
         level = Changeable.level;
         SaveSystem.SavePlayer(this);
-        Debug.Log("Saved");
-        Debug.Log("Changeable : " + Changeable.level);
+        //Debug.Log("Saved");
+        //Debug.Log("Changeable : " + Changeable.level);
+        if (LoadingAnim !=null)
+        {
+            LoadingAnim.SetTrigger("Saved");
+        }
+
     }
 
     public void LoadPlayer()
@@ -138,13 +146,7 @@ public class FPS : MonoBehaviour {
 
         Changeable.level = data.level;
 
-        //Vector3 position;
-        //position.x = data.position[0];
-        //position.y = data.position[1];
-        //position.z = data.position[2];
-        //transform.position = position;
-
-        Debug.Log("Loaded");
+        //Debug.Log("Loaded");
         Debug.Log(data.level);
     }
 

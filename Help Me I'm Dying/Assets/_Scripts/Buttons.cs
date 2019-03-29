@@ -18,8 +18,6 @@ public class Buttons : MonoBehaviour {
 
     public GameObject optionsMenu;
 
-    public WinMenu winmenu;
-
     FPS fps;
 
     //public GameObject SaveButtons
@@ -121,5 +119,14 @@ public class Buttons : MonoBehaviour {
     {
         fps.SavePlayer();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void loadCredits()
+    {
+        Time.timeScale = 1f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+        SceneManager.LoadScene(5);
     }
 }

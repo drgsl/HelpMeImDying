@@ -17,7 +17,11 @@ public class TriggerEnding : MonoBehaviour
     {
         if (other.gameObject == player)
         {
+            Cursor.visible = true;
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 

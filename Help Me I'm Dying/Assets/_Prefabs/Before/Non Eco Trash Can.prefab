@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 360808201577459256}
   - component: {fileID: 360808201576459512}
   - component: {fileID: 360808201578459705}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Non Eco Trash Can
   m_TagString: Changeable
   m_Icon: {fileID: 0}

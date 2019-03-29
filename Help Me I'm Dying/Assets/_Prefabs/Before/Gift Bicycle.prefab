@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 3374662010537396895}
   - component: {fileID: 3374662010537396893}
   - component: {fileID: 8148941288700086082}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gift Bicycle
   m_TagString: Changeable
   m_Icon: {fileID: 0}

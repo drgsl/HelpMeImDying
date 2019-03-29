@@ -43,10 +43,13 @@ public class EnemyMovement : MonoBehaviour {
 
         playercam = GameObject.FindGameObjectWithTag("MainCamera");
         cam = GetComponent<Camera>();
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
+
+
 
 
         if (DialogueIsFinished)

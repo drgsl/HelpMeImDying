@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
+        EnemyMovement.DialogueIsFinished = false;
 
         sentences.Clear();
         names.Clear();
@@ -99,8 +100,12 @@ public class DialogueManager : MonoBehaviour
             case 1:
                 Changeable.level ++;
                 fps.SavePlayer();
+                Time.timeScale = 1f;
                 Cursor.visible = true;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                Cursor.lockState = CursorLockMode.None;
+                MenuButton.LevelSelectorActive = true;
+
+                SceneManager.LoadScene(0);
                 break;
             default:
                 Cursor.lockState = CursorLockMode.Locked;

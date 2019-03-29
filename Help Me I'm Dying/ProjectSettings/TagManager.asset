@@ -18,6 +18,7 @@ TagManager:
   - KeycardReader
   - WinMenu
   - PlayerCollider
+  - Loading
   layers:
   - Default
   - TransparentFX
@@ -28,16 +29,16 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - save Rain Water
+  - encourage Bicycles
+  - encourage Solar Systems
+  - change to Ecological Lightning
+  - use Economical Products
+  - start Recycling
+  - stop Wasting Water
+  - Learn more about polution
+  - change to Ecological Lightbulbs
+  - Plant Trees
   - 
   - 
   - 

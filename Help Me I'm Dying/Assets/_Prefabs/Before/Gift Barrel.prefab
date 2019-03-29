@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5448748512826980393}
   - component: {fileID: 5448748512825042661}
   - component: {fileID: 5448748512825042660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gift Barrel
   m_TagString: Changeable
   m_Icon: {fileID: 0}

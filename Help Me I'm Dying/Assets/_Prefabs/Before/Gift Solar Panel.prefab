@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 313063828096722442}
   - component: {fileID: 313063828096722440}
   - component: {fileID: 417010499928919214}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gift Solar Panel
   m_TagString: Changeable
   m_Icon: {fileID: 0}

@@ -3906,7 +3906,7 @@ GameObject:
   - component: {fileID: 3373506074099310366}
   - component: {fileID: 3373506074099310336}
   - component: {fileID: 3636638388733111559}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Non Eco Laptop
   m_TagString: Changeable
   m_Icon: {fileID: 0}
