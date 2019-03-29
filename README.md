@@ -3,6 +3,10 @@
 ## Despre
 **Help Me I'm Dying** Este un joc care îți atrage atenția că trăiești în natură și depinzi de armonia mediului înconjurător. Este cât se poate de evident faptul că stă în puterea noastră să ajutăm la salvarea mediului. Prezentând o problemă ecologică generației tinere sub forma unui joc, ne-am dorit să îi facem să se concentreze asupra ceea ce este cu adevărat important: **Reduce Refolosește Reciclează!**♻️
 
+##Videoclip
+
+
+
 ## Tehnologii utilizate
 * Unity
 * C#
@@ -14,3 +18,25 @@ Jocul Help Me I'm Dying a fost creat de către echipa **Blue Flamingo** în cadr
 * Entuc Maria-Raluca
 
 ## Imagini
+
+<p>
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/BetterHandle.PNG" width="30%" />
+
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/House01%20Interior.PNG" width="30%" />
+
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/House01.PNG" width="30%" />
+</p>
+
+
+<p>
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/Maze.PNG" width="30%" />
+
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/PauseMenu.PNG" width="30%" />
+
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/MainMenu.PNG" width="30%" />
+</p>
+
+
+<p>
+<img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Screenshots/Station.PNG" width="30%" />
+</p>
