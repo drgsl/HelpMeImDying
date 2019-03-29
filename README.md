@@ -1,5 +1,3 @@
-## Help Me I'm Dying
-
 <p align="center"><img src="https://github.com/BobuDragos/HelpMeImDying/blob/master/Help%20Me%20I'm%20Dying/Assets/_Sprites/IMG_6773.PNG" width="30%" /></p>
 
 ## Despre
