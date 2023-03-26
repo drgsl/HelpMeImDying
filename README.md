@@ -6,6 +6,9 @@
 ## Overview
 Greetings and welcome to Help Me I'm Dying, an award-winning game that secured second place in the FiiCode GameJam, organized by the esteemed Alexandru Ioan Cuza Iasi faculty, computer science bachelors program. This captivating game offers an environmentally friendly adventure, comprising a single cutscene and three levels, aimed at promoting awareness of the vital role of protecting our planet.
 
+## 🎥 Showcase
+Check out this [YouTube video](https://www.youtube.com/watch?v=t8LSrUmXu70&list=PL-j3UE1st04DPCC_Em-48laJLwJhntyAW&index=3&t=2s&ab_channel=BlueFlamingo) to see the project in action!
+
 ## Levels
 The game features one cutscene and three levels
 
